@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { AppRouting } from './sysgen/AppRouting';
 
 @NgModule({
   declarations: [
@@ -18,24 +19,7 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: 'form',
-        component: FormComponent
-      },
-      {
-        path: 'contact',
-        component: ContactComponent
-      },
-      {
-        path: 'about',
-        component: AboutComponent
-      }
-    ])
+    AppRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
