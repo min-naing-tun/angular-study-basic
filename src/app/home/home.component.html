@@ -37,3 +37,13 @@
       </div>
     </div>
     <hr>
+
+    <div class="container-fluid">
+      {{dataAry | json}}
+      <p *ngFor="let data of dataAry">
+       
+        {{data.name}} <br>
+        {{data.id}} <br>
+      </p>
+
+    </div>

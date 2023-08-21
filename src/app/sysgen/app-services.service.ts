@@ -1,4 +1,6 @@
+import { HttpClient,HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class AppServicesService {
     this.userInputData.push(message);
   }
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getDeveloperEmail(){
     return "minnaingtun@mmeasenet.com"
@@ -24,5 +26,10 @@ export class AppServicesService {
   developerName: string = "Min Naing Tun";
 
   public userInputData: string[] = ["", "", "", ""];
+
+  getUsers() {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/users');
+  }
+
 
 }

@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { AppRouting } from './sysgen/AppRouting';
 import { AppServicesService } from './sysgen/app-services.service';
 import { UserFormShowComponent } from './user-form-show/user-form-show.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserFormShowComponent } from './user-form-show/user-form-show.component
     UserFormShowComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     AppRouting
