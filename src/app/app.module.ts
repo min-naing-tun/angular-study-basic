@@ -8,6 +8,8 @@ import { FormComponent } from './form/form.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AppRouting } from './sysgen/AppRouting';
+import { AppServicesService } from './sysgen/app-services.service';
+import { UserFormShowComponent } from './user-form-show/user-form-show.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,15 @@ import { AppRouting } from './sysgen/AppRouting';
     HomeComponent,
     FormComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    UserFormShowComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRouting
   ],
-  providers: [],
+  providers: [AppServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

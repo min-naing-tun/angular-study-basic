@@ -3,6 +3,7 @@ import { AboutComponent } from "../about/about.component";
 import { ContactComponent } from "../contact/contact.component";
 import { FormComponent } from "../form/form.component";
 import { HomeComponent } from "../home/home.component";
+import { UserFormShowComponent } from "../user-form-show/user-form-show.component";
 
 const App_Routing: Routes = [
     {
@@ -24,6 +25,10 @@ const App_Routing: Routes = [
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: "userFormShow",
+        component: UserFormShowComponent
       }
 ]
 

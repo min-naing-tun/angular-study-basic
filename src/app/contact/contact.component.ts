@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppServicesService } from '../sysgen/app-services.service';
+import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  constructor() { }
+  constructor(public devService: AppServicesService) { }
 
   ngOnInit() { }
 
@@ -14,11 +16,15 @@ export class ContactComponent implements OnInit {
   myPhone: number = 9252660486;
   myEmail: string = "minnaingtun@mmeasenet.com"
   myFlag: boolean = false;
-  userMessage: string = ""
+  userMessage: string = "";
+  userName: string = "";
+  userEmail: string = "";
+  userSubject: string = "";
 
 
   clickFunction() {
     this.myFlag = !this.myFlag;
+    this.devService.userInputDataSubmitted(this.userName, this.userEmail, this.userSubject, this.userMessage); // store data to service array.
     alert("Address : "+this.myAddress+"\nPhone : "+this.myPhone+"\nEmail : "+this.myEmail+"\nUser Message => "+this.userMessage);
   }
 
