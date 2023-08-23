@@ -1,1 +1,63 @@
-<p>form works!</p>
+<div class="container my-5">
+    <div>
+        <form class="form table-bordered rounded-3 p-5 bg-body-secondary" #userForm="ngForm" (ngSubmit)="submitData(userForm.value)">
+            <h5 class="mb-3">Template Driven Form</h5>
+            <div class="input-group mb-3">
+                <span class="input-group-text">First Name</span>
+                <input type="text" name="userFirstName" class="form-control" ngModel>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Last Name</span>
+                <input type="text" name="userLastName" class="form-control" ngModel>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input type="text" name="userEmail" class="form-control" ngModel>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Password</span>
+                <input type="password" name="userPassword" class="form-control" ngModel>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Skills</span>
+                <select name="userSkill" class="form-control form-select" ngModel>
+                    <option *ngFor="let i of skillData" value="{{i}}">{{i}}</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="container my-5">
+    <div>
+        <form class="form table-bordered rounded-3 p-5 bg-body-secondary" [formGroup]="myForm" (ngSubmit)="submitData(myForm.value)">
+            <h5 class="mb-3">Modal Driven Form</h5>
+            <div class="input-group mb-3">
+                <span class="input-group-text">First Name</span>
+                <input type="text" name="userFirstName" class="form-control" formControlName="rFirstName">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Last Name</span>
+                <input type="text" name="userLastName" class="form-control" formControlName="rLastName">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input type="text" name="userEmail" class="form-control" formControlName="rEmail">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Password</span>
+                <input type="password" name="userPassword" class="form-control" formControlName="rPassword">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Skills</span>
+                <select name="userSkill" class="form-control form-select" formControlName="rSkill">
+                    <option *ngFor="let i of skillData" value="{{i}}">{{i}}</option>
+                </select>
+            </div>
+            <button [disabled]="!myForm.valid" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
