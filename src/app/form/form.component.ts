@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -12,16 +12,41 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      rFirstName : new FormControl(),
-      rLastName: new FormControl(),
-      rEmail: new FormControl(),
-      rPassword: new FormControl(),
-      rSkill: new FormControl()
+      rFirstName : new FormControl('', Validators.compose(
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.pattern('[\\a-z\\A-Z\\s\\_/]+'), //only accept a to z, A to Z, Space string, underscore
+          Validators.maxLength(20)
+        ]
+      )),
+      rLastName: new FormControl('', Validators.compose(
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(20),
+          Validators.pattern('[\\a-z\\A-Z\\_\\s/]+')
+        ]
+      )),
+      rEmail: new FormControl('', Validators.compose(
+        [
+          Validators.required,
+          Validators.email
+        ]
+      )),
+      rPassword: new FormControl('', Validators.compose(
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(16),
+        ]
+      )),
+      rSkill: new FormControl('', Validators.required)
     })
   }
 
   submitData(userForm: string[]){
-    console.log(userForm);
+    console.log(userForm); 
   }
 
 }
