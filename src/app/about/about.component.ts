@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  developerName: string = "min naing tun";
+  developerEmail: string = "minnaingtun.pro@gmail.com";
+  currentDate: Date = new Date();
+
 }

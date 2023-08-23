@@ -12,8 +12,15 @@ import { AppServicesService } from './sysgen/app-services.service';
 import { UserFormShowComponent } from './user-form-show/user-form-show.component';
 import {HttpClientModule} from '@angular/common/http'
 
+import {SumArrayPipe} from './about/SumArrayPipe'
+import {SortArrayPipe} from './about/SortArrayPipe'
+import {SortStringArrayPipe} from './about/SortStringArrayPipe'
+
 @NgModule({
   declarations: [
+    SortStringArrayPipe,
+    SortArrayPipe,
+    SumArrayPipe,
     AppComponent,
     HomeComponent,
     FormComponent,

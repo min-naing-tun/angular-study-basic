@@ -1,1 +1,28 @@
-<p>about works!</p>
+<!-- About Section-->
+<section class="bg-light py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+                <div class="text-center my-5">
+                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                    <p class="lead fw-light mb-4">My name is <b>{{developerName | uppercase}}</b></p><!--Use piping-->
+                    <p class="lead fw-light mb-4">Current date is <b>{{currentDate | date: 'fullDate'}}</b></p><!--Use piping-->
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
+                    <div class="d-flex justify-content-center fs-2 gap-4">
+                        <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                        <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
+                        <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item">Sum of [ {{[2, 3, 1, 23, 42, 1, 2]}} ] = {{[2, 3, 1, 23, 42, 1, 2] | sumArray}}</li> <!--use custom piping-->
+            <li class="list-group-item">Sort of [ {{[0,9,8,7,6,5,4,3,6,3,5,4,2,5,7,9,1,2]}} ] = {{[0,9,8,7,6,5,4,3,6,3,5,4,2,5,7,9,1,2] | sortArray}}</li> <!--use custom piping-->
+            <li class="list-group-item">Ascending of [ {{['d', 'b', 'a', 'e', 'f', 'c']}} ] = {{['d', 'b', 'a', 'e', 'f', 'c'] | sortStringArray: 'asc'}}</li>
+            <li class="list-group-item">Descending of [ {{['d', 'b', 'a', 'e', 'f', 'c']}} ] = {{['d', 'b', 'a', 'e', 'f', 'c'] | sortStringArray: 'desc'}}</li>
+        </ul>
+    </div>
+</section>
