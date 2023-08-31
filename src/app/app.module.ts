@@ -15,7 +15,10 @@ import {HttpClientModule} from '@angular/common/http'
 
 import {SumArrayPipe} from './about/SumArrayPipe'
 import {SortArrayPipe} from './about/SortArrayPipe'
-import {SortStringArrayPipe} from './about/SortStringArrayPipe'
+import {SortStringArrayPipe} from './about/SortStringArrayPipe';
+import { BtnHoverDirective } from './btn-hover.directive';
+import { BtnTextBoldDirective } from './btn-text-bold.directive';
+import { BtnCustomMarginWhenHoverDirective } from './btn-custom-margin.directive'
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {SortStringArrayPipe} from './about/SortStringArrayPipe'
     FormComponent,
     ContactComponent,
     AboutComponent,
-    UserFormShowComponent
+    UserFormShowComponent,
+    BtnHoverDirective,
+    BtnTextBoldDirective,
+    BtnCustomMarginWhenHoverDirective
   ],
   imports: [
     ReactiveFormsModule,
