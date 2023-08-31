@@ -6,7 +6,8 @@
         <li>Message : {{devService.userInputData[3]}}</li> <!--use service array-->
     </ul>
     <hr>
-    <button type="button" class="btn btn-success" appBtnTextBold appBtnHover appBtnCustomMarginWhenHover [customMargin]="'30px'">Clicker</button>
+    <button type="button" class="btn btn-success" appBtnTextBold appBtnHover appBtnCustomMarginWhenHover
+        [customMargin]="'30px'">Clicker</button>
 </div>
 
 <hr>
@@ -26,9 +27,16 @@
 <hr>
 <div class="text-start">
     <b class="text-start">Fruit List</b>
-<div *ngFor="let item of fruits" class="text-start"> <!--Structure directive for ngFor-->
-    <li>{{item}}</li>
-</div>
+    <div *ngFor="let item of fruits" class="text-start"> <!--Structure directive for ngFor-->
+        <li>{{item}}</li>
+    </div>
 </div>
 <hr>
+<hr>
+<hr>
+<div style="background-color: antiquewhite; padding: 20px;">
+    <!--For Route Testing-->
+    <my-ComHome></my-ComHome>
+    <!---->
+</div>
 <hr>
