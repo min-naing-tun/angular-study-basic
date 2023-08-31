@@ -10,4 +10,7 @@ export class UserFormShowComponent {
   
   constructor(public devService: AppServicesService) {
   }
+
+  developerAge = 23; //data for ng Switch and ng If [ Structure Directive ]
+  fruits: string[] = ['apple', 'mango', 'orange', 'lemon', 'peach']; //data for ng For [ Structure Directive ]
 }
