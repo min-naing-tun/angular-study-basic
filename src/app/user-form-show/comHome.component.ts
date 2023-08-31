@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
     <div style="padding: 20px; background-color: burlywood;">
     <a routerLink=ComA class="p-3">comA</a>&nbsp;&nbsp;&nbsp;
     <a routerLink="ComB" class="p-3">comB</a>&nbsp;&nbsp;&nbsp;
-    <a routerLink="ComC" class="p-3">comC</a>&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="['ComC']" [queryParams]="{'name': 'Min Naing Tun', 'age': '23'}" class="p-3">comC</a>&nbsp;&nbsp;&nbsp; <!--Sending with query params-->
     <a [routerLink]="['ComD', 10]" class="p-3">comD</a> <!--Route with route parameters-->
     </div>
     <br>
