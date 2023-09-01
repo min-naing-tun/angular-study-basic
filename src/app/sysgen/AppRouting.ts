@@ -4,6 +4,8 @@ import { ContactComponent } from "../contact/contact.component";
 import { FormComponent } from "../form/form.component";
 import { HomeComponent } from "../home/home.component";
 import { UserFormShowComponent } from "../user-form-show/user-form-show.component";
+import { userContactFormCorrectionGuard } from "../user-contact-form-correction.guard";
+import { userContactFornLeavingGuard } from "../user-contact-forn-leaving.guard";
 
 const App_Routing: Routes = [
     {
@@ -28,7 +30,9 @@ const App_Routing: Routes = [
       },
       {
         path: "userFormShow",
-        component: UserFormShowComponent
+        component: UserFormShowComponent,
+        canActivate: [userContactFormCorrectionGuard], // use Can Activate for entering guard condition
+        canDeactivate: [userContactFornLeavingGuard], // use Can Deactivate for leaving guard condition
       }
 ]
 
