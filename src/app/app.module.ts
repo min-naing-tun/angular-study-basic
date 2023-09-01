@@ -26,6 +26,9 @@ import { ComC } from './user-form-show/comC.component';
 import { ComD } from './user-form-show/comD.component';
 import { ComHome } from './user-form-show/comHome.component';
 import { ComRoute } from './user-form-show/comRoute.component';
+import { ChildOne } from './user-form-show/childOne.component';
+import { ChildTwo } from './user-form-show/childTwo.component';
+import { ChildThree } from './user-form-show/childThree.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { ComRoute } from './user-form-show/comRoute.component';
     ComC,
     ComD,
     ComHome,
+    ChildOne,
+    ChildTwo,
+    ChildThree,
     SortStringArrayPipe,
     SortArrayPipe,
     SumArrayPipe,

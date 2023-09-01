@@ -3,11 +3,32 @@ import { ComA } from './comA.component';
 import { ComB } from './comB.component';
 import { ComC } from './comC.component';
 import { ComD } from './comD.component';
+import { ChildOne } from './childOne.component';
+import { ChildTwo } from './childTwo.component';
+import { ChildThree } from './childThree.component';
 
 const mntRouting: Routes = [
     {
         path: 'userFormShow/ComA',
-        component: ComA
+        component: ComA,
+        children: [
+            {
+                path: "",
+                component: ChildOne
+            },
+            {
+                path: "childOne",
+                component: ChildOne
+            },
+            {
+                path: "childTwo",
+                component: ChildTwo
+            },
+            {
+                path: "childThree",
+                component: ChildThree
+            }
+        ]
     },
     {
         path: 'userFormShow/ComB',
